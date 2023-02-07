@@ -8,11 +8,6 @@ const items = [
   },
   {
     id: nanoid(),
-    to: "/posts",
-    text: "Posts Search",
-  },
-  {
-    id: nanoid(),
     to: "/my-favorite-books",
     text: "Favorite Books",
   },
@@ -20,11 +15,6 @@ const items = [
     id: nanoid(),
     to: "/books",
     text: "Books",
-  },
-  {
-    id: nanoid(),
-    to: "/vote",
-    text: "Vote",
   },
 ];
 
