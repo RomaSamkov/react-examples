@@ -4,8 +4,10 @@ import BookList from "./BookList";
 
 import styles from "./my-books.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addBook, removeBook, setFilter } from "redux/actions";
-import { getFilter, getFilteredBooks } from "redux/selectors";
+import { getFilteredBooks } from "redux/books/books-selectors";
+import { getFilter } from "redux/filter/filter-selectors";
+import { addBook, removeBook } from "redux/books/books-actions";
+import { setFilter } from "redux/filter/filter-actions";
 
 const MyBooks = () => {
   const books = useSelector(getFilteredBooks);
