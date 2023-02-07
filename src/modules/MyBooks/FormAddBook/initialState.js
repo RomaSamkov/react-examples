@@ -1,5 +1,5 @@
 export const initialState = {
-    title: "",
-    author: "",
-    favorite: false,
-}
+  title: "",
+  author: "",
+  favorite: false,
+};

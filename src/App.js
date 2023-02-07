@@ -1,7 +1,6 @@
-import Menu from "./modules/Menu/Menu";
-import UserRoutes from "./UserRoutes";
-
-import "./shared/styles/style.css";
+import "./App.css";
+import Menu from "modules/Menu";
+import UserRoutes from "UserRoutes";
 
 function App() {
   return (
