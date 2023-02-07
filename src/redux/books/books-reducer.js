@@ -1,12 +1,12 @@
-import { ADD_BOOK, REMOVE_BOOK } from "./books-types";
+import { addBook, removeBook } from "./books-actions";
 
 const initialStore = [];
 
 const booksReducer = (store = initialStore, { type, payload }) => {
   switch (type) {
-    case ADD_BOOK:
+    case addBook.type:
       return [...store, payload];
-    case REMOVE_BOOK:
+    case removeBook.type:
       return store.filter(({ id }) => id !== payload);
 
     default:
