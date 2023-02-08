@@ -1,17 +1,12 @@
+import { createReducer } from "@reduxjs/toolkit";
 import { addBook, removeBook } from "./books-actions";
 
-const initialStore = [];
-
-const booksReducer = (store = initialStore, { type, payload }) => {
-  switch (type) {
-    case addBook.type:
-      return [...store, payload];
-    case removeBook.type:
-      return store.filter(({ id }) => id !== payload);
-
-    default:
-      return store;
-  }
-};
+const booksReducer = createReducer([], {
+  [addBook]: (store, { payload }) => {
+    store.push(payload);
+  },
+  [removeBook]: (store, { payload }) =>
+    store.filter(({ id }) => id !== payload),
+});
 
 export default booksReducer;
