@@ -6,8 +6,8 @@ import styles from "./my-books.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getFilteredBooks } from "redux/books/books-selectors";
 import { getFilter } from "redux/filter/filter-selectors";
-import { addBook, removeBook } from "redux/books/books-actions";
-import { setFilter } from "redux/filter/filter-actions";
+import { addBook, removeBook } from "redux/books/books-slice";
+import { setFilter } from "redux/filter/filter-slice";
 
 const MyBooks = () => {
   const books = useSelector(getFilteredBooks);
