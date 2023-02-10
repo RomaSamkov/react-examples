@@ -6,14 +6,21 @@ import styles from "./my-books.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getFilteredBooks } from "redux/books/books-selectors";
 import { getFilter } from "redux/filter/filter-selectors";
-import { addBook, removeBook } from "redux/books/books-slice";
-import { setFilter } from "redux/filter/filter-slice";
+
+import { addBook, removeBook } from "redux/books/books-actions";
+import { setFilter } from "redux/filter/filter-actions";
+import { useEffect } from "react";
+import { fetchBooks } from "redux/books/books-operations";
 
 const MyBooks = () => {
   const books = useSelector(getFilteredBooks);
   const filter = useSelector(getFilter);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   const onAddBook = (payload) => {
     const action = addBook(payload);
