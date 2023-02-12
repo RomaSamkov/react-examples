@@ -1,12 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 
-import {
-  addBook,
-  fetchBooksError,
-  fetchBooksLoading,
-  fetchBooksSuccess,
-  removeBook,
-} from "./books-actions";
+import * as actions from "./books-actions";
 
 const initialStore = {
   items: [],
@@ -15,23 +9,30 @@ const initialStore = {
 };
 
 const booksReducer = createReducer(initialStore, {
-  [fetchBooksLoading]: (store) => {
+  [actions.fetchBooksLoading]: (store) => {
     store.loading = true;
     store.error = null;
   },
-  [fetchBooksSuccess]: (store, { payload }) => {
+  [actions.fetchBooksSuccess]: (store, { payload }) => {
     store.items = payload;
     store.loading = false;
   },
-  [fetchBooksError]: (store, { payload }) => {
+  [actions.fetchBooksError]: (store, { payload }) => {
     store.loading = false;
     store.error = payload;
   },
-  [addBook.type]: (store, { payload }) => {
-    store.push(payload);
+  [actions.addBookLoading]: (store) => {
+    store.loading = true;
+    store.error = null;
   },
-  [removeBook]: (store, { payload }) =>
-    store.filter((item) => item.id !== payload),
+  [actions.addBookSuccess]: (store, { payload }) => {
+    store.loading = false;
+    store.items.push(payload);
+  },
+  [actions.addBookError]: (store, { payload }) => {
+    store.loading = false;
+    store.error = payload;
+  },
 });
 
 export default booksReducer;
