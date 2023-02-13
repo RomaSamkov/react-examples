@@ -7,3 +7,7 @@ export const fetchBooksError = createAction("books/fetch/error");
 export const addBookLoading = createAction("books/add/loading");
 export const addBookSuccess = createAction("books/add/success");
 export const addBookError = createAction("books/add/error");
+
+export const removeBookLoading = createAction("books/remove/loading");
+export const removeBookSuccess = createAction("books/remove/success");
+export const removeBookError = createAction("books/remove/error");
