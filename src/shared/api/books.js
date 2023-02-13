@@ -13,3 +13,8 @@ export const addBook = async (data) => {
   const { data: result } = await instance.post("/", data);
   return result;
 };
+
+export const removeBook = async (id) => {
+  const { data: result } = await instance.delete(`/${id}`);
+  return result;
+};
