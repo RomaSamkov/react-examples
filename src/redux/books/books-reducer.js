@@ -33,6 +33,18 @@ const booksReducer = createReducer(initialStore, {
     store.loading = false;
     store.error = payload;
   },
+  [actions.removeBookLoading]: (store) => {
+    store.loading = true;
+    store.error = null;
+  },
+  [actions.removeBookSuccess]: (store, { payload }) => {
+    store.loading = false;
+    store.items = store.items.filter(({ id }) => id !== payload);
+  },
+  [actions.addBookError]: (store, { payload }) => {
+    store.loading = false;
+    store.error = payload;
+  },
 });
 
 export default booksReducer;
