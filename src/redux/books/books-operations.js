@@ -14,8 +14,25 @@ export const fetchBooks = () => {
   return func;
 };
 
+const isDublicate = ({ title, author }, books) => {
+  const normalizedTitle = title.toLowerCase();
+  const normalizedAuthor = author.toLowerCase();
+  const result = books.find((item) => {
+    return (
+      normalizedTitle === item.title.toLowerCase() &&
+      normalizedAuthor === item.author.toLowerCase()
+    );
+  });
+  return Boolean(result);
+};
+
 export const addBook = (data) => {
-  const func = async (dispatch) => {
+  const func = async (dispatch, getState) => {
+    const { books } = getState();
+    if (isDublicate(data, books.items)) {
+      return alert(`${data.title} or ${data.author} is already exist !`);
+    }
+
     try {
       dispatch(actions.addBookLoading());
       const result = await api.addBook(data);
@@ -28,6 +45,14 @@ export const addBook = (data) => {
 };
 
 export const removeBook = (id) => {
-  const func = (dispatch) => {};
+  const func = async (dispatch) => {
+    try {
+      dispatch(actions.removeBookLoading());
+      await api.removeBook(id);
+      dispatch(actions.removeBookSuccess(id));
+    } catch (error) {
+      dispatch(actions.removeBookError(error.message));
+    }
+  };
   return func;
 };
