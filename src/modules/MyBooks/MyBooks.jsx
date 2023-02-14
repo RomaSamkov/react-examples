@@ -25,8 +25,8 @@ const MyBooks = () => {
     dispatch(addBook(payload));
   };
 
-  const onRemoveBook = (payload) => {
-    dispatch(removeBook(payload));
+  const onRemoveBook = (id) => {
+    dispatch(removeBook(id));
   };
 
   const onSetFilter = ({ target }) => {
