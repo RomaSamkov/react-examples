@@ -1,11 +1,11 @@
 import "./App.css";
-import Menu from "modules/Menu";
+import NavBar from "modules/NavBar";
 import UserRoutes from "UserRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Menu />
+      <NavBar />
       <UserRoutes />
     </div>
   );
