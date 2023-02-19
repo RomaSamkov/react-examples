@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/156.74090233.chunk.css","mappings":"AAAA,sBAEI,YAEA,eADA,gBAFA,oBAGA,CAGJ,uBACI","sources":["pages/HomePage/HomePage.module.scss"],"sourcesContent":[".link{\n    text-decoration: none;\n    color: green;\n    font-weight: bold;\n    font-size: 28px;\n}\n\n.click{\n    color: rebeccapurple;\n}"],"names":[],"sourceRoot":""}
