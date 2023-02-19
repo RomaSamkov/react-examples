@@ -1,3 +1,4 @@
+import PrivateRoute from "modules/PrivateRoute/PrivateRoute";
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -17,8 +18,10 @@ const UserRoutes = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/books" element={<BooksPage />} />
-        <Route path="/my-favorite-books" element={<MyFavoriteBooksPage />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/my-favorite-books" element={<MyFavoriteBooksPage />} />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
