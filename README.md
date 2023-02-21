@@ -1,4 +1,4 @@
-# These are just some examples of my work while learning React !
+# These are just some drafts of my work while learning React !
 
 # Getting Started with Create React App
 
