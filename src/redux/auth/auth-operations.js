@@ -34,3 +34,38 @@ export const login = createAsyncThunk(
     }
   }
 );
+
+export const logout = createAsyncThunk(
+  "auth/logout",
+  async (_, { rejectWithValue }) => {
+    try {
+      const result = await api.logout();
+      return result;
+    } catch ({ response }) {
+      const { status, statusText } = response;
+      const error = {
+        status,
+        statusText,
+      };
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const getCurrent = createAsyncThunk(
+  "auth/current",
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      const { auth } = getState();
+      const result = await api.getCurrent(auth.token);
+      return result;
+    } catch ({ response }) {
+      const { status, statusText } = response;
+      const error = {
+        status,
+        statusText,
+      };
+      return rejectWithValue(error);
+    }
+  }
+);
