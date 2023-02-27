@@ -2,6 +2,7 @@ import PrivateRoute from "modules/PrivateRoute/PrivateRoute";
 import PublicRoute from "modules/PublicRoute/PublicRoute";
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 const MyFavoriteBooksPage = lazy(() =>
   import("pages/MyFavoriteBooksPage/MyFavoriteBooksPage")
@@ -27,6 +28,26 @@ const UserRoutes = () => {
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Toaster
+        toastOptions={{
+          error: {
+            style: {
+              fontWeight: 500,
+              padding: "16px",
+              color: "#fff",
+              background: "red",
+            },
+          },
+          success: {
+            style: {
+              fontWeight: 500,
+              padding: "16px",
+              color: "#fff",
+              background: "#5446cc",
+            },
+          },
+        }}
+      />
     </Suspense>
   );
 };
