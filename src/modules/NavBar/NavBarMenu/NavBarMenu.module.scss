@@ -25,7 +25,6 @@
     height: 30px;
     padding: 10px 15px;
     color: #fff;
-    background-color: rgb(128, 0, 100);
     font-size: 16px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     border-radius: 10px;
@@ -33,11 +32,15 @@
 }
 
 .link:hover {
-    background-color: green;
+    background: rgb(50, 46, 171);
+    background: linear-gradient(90deg, rgba(50, 46, 171, 0.9864320728291317) 0%, 
+  rgba(139, 136, 238, 0.927608543417367) 47%, 
+  rgba(90, 105, 235, 1) 74%, 
+  rgba(24, 63, 159, 1) 96%);
     color: #fff;
 }
 
-.active {
-    background-color: green;
+.link.active {
+    background-color: rgb(128, 0, 100);
     color: #fff;
 }
