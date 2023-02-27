@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.scss";
 import NavBar from "modules/NavBar";
 import UserRoutes from "UserRoutes";
 import { useDispatch } from "react-redux";
