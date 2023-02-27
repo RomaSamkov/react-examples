@@ -1,10 +1,61 @@
 .link{
-    text-decoration: none;
-    color: green;
+    margin-top: 60px;
+    color: #fff;
     font-weight: bold;
     font-size: 28px;
+    font-style: italic;
+    color: aqua;
 }
 
 .click{
     color: rebeccapurple;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    color: #fff;
+    margin-top: 100px;
+}
+
+.wrapper{
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 36px;
+}
+
+.text{
+    color: #fff;
+}
+
+.fontLink{
+    font-family: 'BoyzRGrossShadowNF';
+    font-size: 36px;
+    margin-left: 25px;
+    color: black;
+}
+.fontLink:hover{
+    font-family: 'BoyzRGrossShadowNF';
+    font-size: 36px;
+    color: #fff;
+}
+.fontFace{
+    font-family: 'BoyzRGrossShadowNF';
+    font-size: 36px;
+    color: black;
+}
+.fontFaceText{
+    font-family: 'ChanticleerRomanNF-bold';
+    font-size: 36px;
 }
