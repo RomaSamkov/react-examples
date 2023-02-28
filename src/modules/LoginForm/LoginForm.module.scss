@@ -1,14 +1,13 @@
-
 .group {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 15px;
 }
 
 .label {
-    flex: 0 0 150px;
-    text-align: left;
-    color: #606266;
+    flex: 0 0 100px;
+    color: #000;
 }
 
 .input {
@@ -19,19 +18,25 @@
 }
 
 .btn {
-    display: inline-block;
     cursor: pointer;
+    width: 198px;
     padding: 10px 15px;
     color: rgb(128, 0, 100);
     background-color: #fff;
     border: 1px solid rgb(128, 0, 100);
     border-radius: 5px;
     margin-top: 10px;
-    /* margin-left: 300px; */
+    margin-left: 100px;
 }
 
 .btn:hover{
     color: #fff;
     background-color:rgb(128, 0, 100);
-     transition: all 500ms;
+    transition: all 500ms;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
