@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <div className={styles.wrapper}>
       <Link to="/" className={styles.logo}>
-        L o g o
+        L o g o 😀
       </Link>
       {isLogin && <NavBarMenu />}
       {isLogin ? <NavBarUser /> : <NavBarAuth />}
