@@ -3,8 +3,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { signup } from "redux/auth/auth-operations";
-
 import useAuth from "shared/hooks/useAuth";
+import styles from "./RegisterPage.module.scss";
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const RegisterPage = () => {
   }
   return (
     <div className="container">
-      <h2>Register Page</h2>
+      <h2 className={styles.title}>Register</h2>
       <RegisterForm onSubmit={onRegister} />
     </div>
   );
