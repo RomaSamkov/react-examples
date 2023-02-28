@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { toast } from "react-hot-toast";
-import { useSelector } from "react-redux";
-import { getAuthError } from "redux/auth/auth-selectors";
 
 const useForm = ({ initialState, onSubmit }) => {
   const [state, setState] = useState({ ...initialState });
@@ -15,14 +12,11 @@ const useForm = ({ initialState, onSubmit }) => {
       [name]: newValue,
     }));
   };
-  const { status } = useSelector(getAuthError);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit({ ...state });
     setState({ ...initialState });
-    if (status) {
-      toast.error("Not correct email or email already exist !");
-    }
   };
 
   return { state, setState, handleChange, handleSubmit };
