@@ -2,7 +2,7 @@ import Container from "./Container";
 import FormAddBook from "./FormAddBook";
 import BookList from "./BookList";
 
-import styles from "./my-books.module.css";
+import styles from "./my-books.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getFilteredBooks } from "redux/books/books-selectors";
 import { getFilter } from "redux/filter/filter-selectors";
