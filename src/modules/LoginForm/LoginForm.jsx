@@ -12,7 +12,7 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form className={styles.form} action="" onSubmit={handleSubmit}>
       <div className={styles.group}>
         <label className={styles.label} htmlFor="">
           Email:
