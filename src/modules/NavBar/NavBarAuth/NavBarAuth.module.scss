@@ -5,11 +5,12 @@
 }
 
 .link{
+    font-family: 'ChanticleerRomanNF-bold';
+    font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: #ece9f8;
 }
 
-.link.active{
-    font-weight: bold;
-    color: orangered;
+.link:hover{
+    color: black;
 }
