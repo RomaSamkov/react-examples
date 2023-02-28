@@ -10,11 +10,15 @@ const HomePage = () => {
       <h2 className={styles.title}>Home Page</h2>
       {!isLogin ? (
         <div className={styles.wrapper}>
-          <h2>This is my student draft while studying : </h2>
+          <h2 className={styles.fontFaceText}>
+            This is my student draft while studying :{" "}
+          </h2>
           <ul>
-            <li className={styles.fontFace}>Redux Toolkit</li>
+            <li className={styles.fontFaceText}>Redux Toolkit</li>
             <li className={styles.fontFaceText}>Login</li>
             <li className={styles.fontFaceText}>Authrization</li>
+            <li className={styles.fontFaceText}>CreateAsyncThunk</li>
+            <li className={styles.fontFaceText}>CreateSlice</li>
           </ul>
           <div className={styles.auth}>
             <NavLink to="/register" className={styles.text}>
@@ -25,7 +29,7 @@ const HomePage = () => {
               Login
             </NavLink>
           </div>
-          <p>
+          <p className={styles.fontFaceText}>
             If you want to see a book-adding app just click on
             <NavLink to="/books" className={styles.fontLink}>
               "Books"
@@ -33,8 +37,8 @@ const HomePage = () => {
           </p>
         </div>
       ) : (
-        <NavLink to="/books" className={styles.link}>
-          <span className={styles.click}> just click</span>
+        <NavLink to="/books" className={styles.text}>
+          <span className={styles.text}> just click</span>
         </NavLink>
       )}
     </div>
