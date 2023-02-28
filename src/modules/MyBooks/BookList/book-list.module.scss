@@ -1,0 +1,31 @@
+.item {
+    margin-bottom: 15px;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(139, 128, 79);
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.itemText {
+    margin-right: 10px;
+    font-style: italic;
+    color: aqua;
+}
+
+.list {
+    list-style: decimal;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
