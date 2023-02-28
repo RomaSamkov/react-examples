@@ -14,9 +14,15 @@
 }
 
 .logo{
+    font-family: 'ChanticleerRomanNF-bold';
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 26px;
+    color: #000;
+}
+
+.logo:hover{
+    color: #fff;
 }
 
 .link{
