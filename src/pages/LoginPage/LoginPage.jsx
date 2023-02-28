@@ -4,6 +4,7 @@ import { login } from "redux/auth/auth-operations";
 import { getAuthError } from "redux/auth/auth-selectors";
 import LoginForm from "modules/LoginForm";
 import useAuth from "shared/hooks/useAuth";
+import styles from "./LoginPage.module.scss";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -19,9 +20,9 @@ const LoginPage = () => {
   }
   return (
     <div className="container">
-      <h2>Login Page</h2>
+      <h2 className={styles.title}>Login</h2>
       <LoginForm onSubmit={onLogin} />
-      {status && <p style={{ color: "red" }}>{statusText}</p>}
+      {status && <p className={styles.notify}>Ooops ! You are {statusText}</p>}
     </div>
   );
 };
