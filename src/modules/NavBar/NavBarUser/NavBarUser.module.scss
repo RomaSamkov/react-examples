@@ -1,0 +1,26 @@
+.span{
+    margin-left: 5px;
+    color: greenyellow;
+}
+
+.name{
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.btn {
+    
+    cursor: pointer;
+    padding: 5px 5px;
+    color: #fff;
+    background-color: rgba(128, 0, 100, 0.507);
+    border: 1px solid rgb(128, 0, 100);
+    border-radius: 20px;
+    
+}
+
+.btn:hover {
+    color: rgb(128, 0, 100);
+    background-color: #fff;
+    transition: all 500ms;
+}
