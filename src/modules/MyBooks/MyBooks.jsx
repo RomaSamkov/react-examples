@@ -39,7 +39,11 @@ const MyBooks = () => {
         <FormAddBook onSubmit={onAddBook} />
       </Container>
       <Container title="List of books">
+        <label className={styles.label} htmlFor="">
+          Filter of books :
+        </label>
         <input
+          className={styles.input}
           onChange={onSetFilter}
           value={filter}
           name="filter"
