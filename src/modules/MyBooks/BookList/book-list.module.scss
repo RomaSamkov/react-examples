@@ -6,8 +6,9 @@
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    background-color: rgb(139, 128, 79);
+    background-color: rgba(29, 76, 146, 0.733);
     color: #fff;
+    margin-left: 40px;
 }
 
 .btn:hover {
@@ -16,6 +17,7 @@
 }
 
 .itemText {
+    width: 100px;
     margin-right: 10px;
     font-style: italic;
     color: aqua;
@@ -28,4 +30,8 @@
 .wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.text{
+    width: 235px;
 }
