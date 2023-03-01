@@ -4,7 +4,7 @@ const BookList = ({ books, removeBook }) => {
   const elements = books.map(({ id, title, author }) => (
     <li key={id} className={styles.item}>
       <div className={styles.wrapper}>
-        <p>
+        <p className={styles.text}>
           Title :<span className={styles.itemText}> "{title}".</span>
         </p>{" "}
         <p>
