@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./NotFoundPage.module.scss";
 
 const NotFoundPage = () => {
   return (
-    <div className="container">
-      <h2>Not found Page</h2>
-      <Link to="/">To Main Page</Link>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Hello Page !</h2>
+      <Link className={styles.link} to="/">
+        To Main Page
+      </Link>
     </div>
   );
 };
